@@ -1,0 +1,26 @@
+<div class="image-section">
+  <h2 [innerHTML]="message"></h2>
+
+  <mat-form-field class="">
+    <mat-label>Text to generate image</mat-label>
+    <input
+      matInput
+      placeholder="Mountain with snow and green trees"
+      [(ngModel)]="inputText"
+    />
+  </mat-form-field>
+
+  <button
+    mat-flat-button
+    color="accent"
+    (click)="generateImage()"
+    [disabled]="inputText!.length < 3"
+  >
+    Generate
+  </button>
+
+  <div class="imgbox">
+    <mat-spinner *ngIf="isLoadingImage"></mat-spinner>
+    <img *ngIf="!isLoadingImage" class="center-fit" src="{{ apiImage }}" />
+  </div>
+</div>

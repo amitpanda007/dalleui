@@ -1,0 +1,14 @@
+{
+  "targets": {
+    "dalleui": {
+      "hosting": {
+        "dalle-ui": [
+          "dalleui"
+        ]
+      }
+    }
+  },
+  "projects": {
+    "default": "dalleui"
+  }
+}

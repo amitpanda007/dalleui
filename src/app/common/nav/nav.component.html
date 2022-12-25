@@ -20,6 +20,8 @@
           <span class="divider"></span>
           <span class="pointer" (click)="navigate('aiavatar')">AI Avatar</span>
           <span class="divider"></span>
+          <span class="pointer" (click)="navigate('aiavatarcam')">AI Cam</span>
+          <span class="divider"></span>
           <span class="pointer" (click)="navigate('pricing')">Pricing</span>
           <span class="divider"></span>
           <span class="pointer" (click)="navigate('about')">About</span>
@@ -48,9 +50,18 @@
       <p>
         <span
           class="pointer"
-          (click)="navigate('transcribe')"
+          (click)="navigate('aiavatar')"
           (click)="drawer.toggle()"
-          >Transcribe</span
+          >AI Avatar</span
+        >
+      </p>
+
+      <p>
+        <span
+          class="pointer"
+          (click)="navigate('aiavatarcam')"
+          (click)="drawer.toggle()"
+          >AI Cam</span
         >
       </p>
 
@@ -100,9 +111,10 @@
   <footer>
     <ul class="global-footer-list">
       <li>
-        <a href="/transcribe" data-analytics-link="aboutFooterLink"
-          >Transcribe</a
-        >
+        <a href="/aiavatar" data-analytics-link="aboutFooterLink">AI Avatar</a>
+      </li>
+      <li>
+        <a href="/aiavatarcam" data-analytics-link="aboutFooterLink">AI Cam</a>
       </li>
       <li>
         <a href="/pricing" data-analytics-link="aboutFooterLink">Pricing</a>

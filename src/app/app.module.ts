@@ -12,6 +12,9 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { DalleVariationComponent } from './dalle-variation/dalle-variation.component';
 import { DragDropFileUploadDirective } from './common/drag-drop-file-upload.directive';
 import { CamCaptureComponent } from './cam-capture/cam-capture.component';
+import { initializeApp,provideFirebaseApp } from '@angular/fire/app';
+import { environment } from '../environments/environment';
+import { provideAuth,getAuth } from '@angular/fire/auth';
 
 @NgModule({
   declarations: [
@@ -30,6 +33,8 @@ import { CamCaptureComponent } from './cam-capture/cam-capture.component';
     FormsModule,
     ReactiveFormsModule,
     AngularMaterialModule,
+    provideFirebaseApp(() => initializeApp(environment.firebase)),
+    provideAuth(() => getAuth()),
   ],
   providers: [],
   bootstrap: [AppComponent],

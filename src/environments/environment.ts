@@ -13,7 +13,7 @@ export const environment = {
     authDomain: 'dalleui.firebaseapp.com',
     messagingSenderId: '312230679942',
     measurementId: 'G-KJM36DMV2C',
-  }
+  },
 };
 
 /*

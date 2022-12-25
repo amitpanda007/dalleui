@@ -1,6 +1,6 @@
 export const environment = {
   production: true,
-  apiUrl: 'http://localhost:80',
+  apiUrl: 'https://dalleapi-production.up.railway.app',
   firebase: {
     projectId: 'dalleui',
     appId: '1:312230679942:web:1a26386e08e4b31c9a0807',

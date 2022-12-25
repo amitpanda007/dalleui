@@ -2,6 +2,7 @@ import { Injectable } from '@angular/core';
 import { throwError } from 'rxjs';
 import { catchError } from 'rxjs/operators';
 import { HttpErrorResponse, HttpClient } from '@angular/common/http';
+import { environment } from 'src/environments/environment';
 
 @Injectable({
   providedIn: 'root',
@@ -11,13 +12,13 @@ export class DalleService {
 
   apiHome() {
     return this.http
-      .get('http://localhost:80/')
+      .get(`${environment.apiUrl}/`)
       .pipe(catchError(this.errorMgmt));
   }
 
   createRandomImageFromText(text: string) {
     return this.http
-      .get(`http://localhost:80/generate-image/?text=${text}`)
+      .get(`${environment.apiUrl}/generate-image/?text=${text}`)
       .pipe(catchError(this.errorMgmt));
   }
 
